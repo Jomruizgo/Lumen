@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "USE"}, {"type": "IDENTIFIER", "value": "data"}, {"type": "DOT"}, {"type": "IDENTIFIER", "value": "search"}, {"type": "AS"}, {"type": "IDENTIFIER", "value": "search"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

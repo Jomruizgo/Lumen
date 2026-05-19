@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "IDENTIFIER", "value": "x"}, {"type": "ASSIGN"}, {"type": "NUMBER", "value": "1"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "DOC_COMMENT", "value": "This is a doc comment"}, {"type": "NEWLINE"}, {"type": "ACTION"}, {"type": "IDENTIFIER", "value": "foo"}, {"type": "LPAREN"}, {"type": "RPAREN"}, {"type": "COLON"}, {"type": "NEWLINE"}, {"type": "INDENT"}, {"type": "PASS"}, {"type": "NEWLINE"}, {"type": "DEDENT"}, {"type": "EOF"}]}

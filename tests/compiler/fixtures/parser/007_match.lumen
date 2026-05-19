@@ -1,0 +1,7 @@
+@lumen 1.0
+
+result = get_data()
+
+match result:
+  ok(x) -> print "ok"
+  fail(e) -> print "fail"

@@ -1,0 +1,7 @@
+@lumen 1.0
+
+entity = resolve("el cliente") {
+  high_confidence: use_context(crm)
+  ambiguous: ask_user("¿Cuál?")
+  unknown: fail_safe()
+}

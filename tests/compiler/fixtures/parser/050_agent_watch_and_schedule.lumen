@@ -1,0 +1,9 @@
+@lumen 1.0
+use comm.email
+
+agent both:
+  watch: read.email(filter={unread: true})
+  schedule: "0 8 * * *"
+  
+  on email(e):
+    pass

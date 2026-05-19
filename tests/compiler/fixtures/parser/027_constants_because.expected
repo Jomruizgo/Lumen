@@ -1,0 +1,51 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "rate",
+      "value": {
+        "node_type": "NumberLiteral",
+        "value": "0.16"
+      },
+      "because": {
+        "node_type": "BecauseAnnotation",
+        "reason": "IVA México 2026"
+      }
+    },
+    {
+      "node_type": "Assignment",
+      "target": "deadline",
+      "value": {
+        "node_type": "BinaryOp",
+        "op": "-",
+        "left": {
+          "node_type": "BinaryOp",
+          "op": "-",
+          "left": {
+            "node_type": "NumberLiteral",
+            "value": "2026"
+          },
+          "right": {
+            "node_type": "NumberLiteral",
+            "value": "12"
+          }
+        },
+        "right": {
+          "node_type": "NumberLiteral",
+          "value": "31"
+        }
+      },
+      "because": {
+        "node_type": "BecauseAnnotation",
+        "reason": "Cierre fiscal anual"
+      }
+    }
+  ],
+  "valid": true
+}

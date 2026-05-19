@@ -1,0 +1,9 @@
+@lumen 1.0
+
+agent tracker:
+  state:
+    count: number = 0
+    seen: List<Text> = []
+  
+  on tick:
+    pass

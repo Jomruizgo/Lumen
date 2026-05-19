@@ -1,0 +1,7 @@
+@lumen 1.0
+
+fn items() -> List<Text>:
+  return []
+
+fn lookup() -> Map<Text, Number>:
+  return {}

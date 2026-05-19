@@ -1,0 +1,87 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "data",
+        "search"
+      ]
+    },
+    {
+      "node_type": "Assignment",
+      "target": "results",
+      "value": {
+        "node_type": "Pipeline",
+        "steps": [
+          {
+            "node_type": "Call",
+            "name": "semantic",
+            "args": [
+              {
+                "node_type": "DotAccess",
+                "obj": {
+                  "node_type": "Identifier",
+                  "name": "search"
+                },
+                "field": "semantic"
+              }
+            ],
+            "kwargs": [
+              [
+                "query",
+                {
+                  "node_type": "StringLiteral",
+                  "value": "documentos sobre Mars"
+                }
+              ],
+              [
+                "corpus",
+                {
+                  "node_type": "StringLiteral",
+                  "value": "~/Documents/"
+                }
+              ]
+            ]
+          },
+          {
+            "node_type": "Call",
+            "name": "sort_by",
+            "args": [
+              {
+                "node_type": "DotAccess",
+                "obj": {
+                  "node_type": "Identifier",
+                  "name": "_"
+                },
+                "field": "relevance"
+              },
+              {
+                "node_type": "Identifier",
+                "name": "descending"
+              }
+            ],
+            "kwargs": []
+          },
+          {
+            "node_type": "Call",
+            "name": "take",
+            "args": [
+              {
+                "node_type": "NumberLiteral",
+                "value": "5"
+              }
+            ],
+            "kwargs": []
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

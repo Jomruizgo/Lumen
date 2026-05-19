@@ -1,0 +1,5 @@
+@lumen 1.0
+
+entity = resolve("test") {
+  maybe: use_context(crm)
+}

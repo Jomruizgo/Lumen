@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Tools
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+test-output.xml
+
+# PyInstaller
+*.spec
+installer/windows/build/
+installer/windows/dist/
+installer/linux/build/
+installer/linux/dist/
+installer/linux/_tmp_app/
+installer/windows/_tmp_app/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets / credentials
+.env
+*.env.local
+credentials.json
+*.pem
+*.key
+
+# Lumen runtime artifacts
+~/.lumen/
+.lumen/
+
+# Poetry
+poetry.lock
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log

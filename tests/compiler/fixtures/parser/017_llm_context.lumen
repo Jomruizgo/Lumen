@@ -1,0 +1,7 @@
+@lumen 1.0
+use llm.ask
+
+result = llm.ask(
+  prompt="Resume esto",
+  context={"emails": emails, "events": events}
+)

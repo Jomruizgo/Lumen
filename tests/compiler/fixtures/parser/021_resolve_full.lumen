@@ -1,0 +1,7 @@
+@lumen 1.0
+
+entity = resolve("el proveedor") {
+  high_confidence: use_context(crm.suppliers)
+  ambiguous: ask_user("¿Cuál proveedor?", options=crm.suppliers.list())
+  unknown: fail_safe()
+}

@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: unterminated resolve block, expected '}'", "line": 6, "col": 1}}

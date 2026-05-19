@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: unterminated string interpolation, expected '}'", "line": 3, "col": 15}}

@@ -1,0 +1,1 @@
+{"valid": true, "inferred_types": {"emails": "List<Email>", "urgent": "List<Email>"}}

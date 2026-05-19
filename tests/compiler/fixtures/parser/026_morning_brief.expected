@@ -1,0 +1,248 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "comm",
+        "email"
+      ]
+    },
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "comm",
+        "notify"
+      ]
+    },
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "time",
+        "calendar"
+      ]
+    },
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "llm",
+        "ask"
+      ]
+    },
+    {
+      "node_type": "ActionDecl",
+      "name": "morning_brief",
+      "params": [],
+      "body": {
+        "node_type": "ActionBody",
+        "reversible": {
+          "node_type": "ReversibleClause",
+          "value": true
+        },
+        "audit": {
+          "node_type": "AuditClause",
+          "level": "full"
+        },
+        "execute": {
+          "node_type": "ExecuteClause",
+          "body": {
+            "node_type": "Block",
+            "statements": [
+              {
+                "node_type": "Assignment",
+                "target": "emails",
+                "value": {
+                  "node_type": "Call",
+                  "name": "email",
+                  "args": [
+                    {
+                      "node_type": "DotAccess",
+                      "obj": {
+                        "node_type": "Identifier",
+                        "name": "read"
+                      },
+                      "field": "email"
+                    }
+                  ],
+                  "kwargs": [
+                    [
+                      "since",
+                      {
+                        "node_type": "StringLiteral",
+                        "value": "last_24h"
+                      }
+                    ]
+                  ]
+                }
+              },
+              {
+                "node_type": "Assignment",
+                "target": "urgent",
+                "value": {
+                  "node_type": "Pipeline",
+                  "steps": [
+                    {
+                      "node_type": "Identifier",
+                      "name": "emails"
+                    },
+                    {
+                      "node_type": "Call",
+                      "name": "filter",
+                      "args": [
+                        {
+                          "node_type": "Call",
+                          "name": "__lambda__",
+                          "args": [
+                            {
+                              "node_type": "Identifier",
+                              "name": "e"
+                            },
+                            {
+                              "node_type": "BinaryOp",
+                              "op": ">",
+                              "left": {
+                                "node_type": "DotAccess",
+                                "obj": {
+                                  "node_type": "Identifier",
+                                  "name": "e"
+                                },
+                                "field": "priority"
+                              },
+                              "right": {
+                                "node_type": "NumberLiteral",
+                                "value": "0.7"
+                              }
+                            }
+                          ],
+                          "kwargs": []
+                        }
+                      ],
+                      "kwargs": []
+                    }
+                  ]
+                }
+              },
+              {
+                "node_type": "Assignment",
+                "target": "today_events",
+                "value": {
+                  "node_type": "Call",
+                  "name": "calendar",
+                  "args": [
+                    {
+                      "node_type": "DotAccess",
+                      "obj": {
+                        "node_type": "Identifier",
+                        "name": "read"
+                      },
+                      "field": "calendar"
+                    }
+                  ],
+                  "kwargs": [
+                    [
+                      "range",
+                      {
+                        "node_type": "StringLiteral",
+                        "value": "today"
+                      }
+                    ]
+                  ]
+                }
+              },
+              {
+                "node_type": "Assignment",
+                "target": "summary",
+                "value": {
+                  "node_type": "Call",
+                  "name": "ask",
+                  "args": [
+                    {
+                      "node_type": "DotAccess",
+                      "obj": {
+                        "node_type": "Identifier",
+                        "name": "llm"
+                      },
+                      "field": "ask"
+                    }
+                  ],
+                  "kwargs": [
+                    [
+                      "prompt",
+                      {
+                        "node_type": "StringLiteral",
+                        "value": "Resume"
+                      }
+                    ],
+                    [
+                      "context",
+                      {
+                        "node_type": "Call",
+                        "name": "__dict__",
+                        "args": [
+                          {
+                            "node_type": "StringLiteral",
+                            "value": "emails"
+                          },
+                          {
+                            "node_type": "Identifier",
+                            "name": "urgent"
+                          }
+                        ],
+                        "kwargs": []
+                      }
+                    ]
+                  ]
+                }
+              },
+              {
+                "node_type": "ExprStatement",
+                "expression": {
+                  "node_type": "Call",
+                  "name": "user",
+                  "args": [
+                    {
+                      "node_type": "DotAccess",
+                      "obj": {
+                        "node_type": "Identifier",
+                        "name": "notify"
+                      },
+                      "field": "user"
+                    },
+                    {
+                      "node_type": "Identifier",
+                      "name": "summary"
+                    }
+                  ],
+                  "kwargs": [
+                    [
+                      "priority",
+                      {
+                        "node_type": "StringLiteral",
+                        "value": "high"
+                      }
+                    ]
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "node_type": "ExprStatement",
+      "expression": {
+        "node_type": "Call",
+        "name": "morning_brief",
+        "args": [],
+        "kwargs": []
+      }
+    }
+  ],
+  "valid": true
+}

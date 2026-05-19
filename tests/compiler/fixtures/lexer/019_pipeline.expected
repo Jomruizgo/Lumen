@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "IDENTIFIER", "value": "data"}, {"type": "PIPE"}, {"type": "IDENTIFIER", "value": "transform"}, {"type": "PIPE"}, {"type": "IDENTIFIER", "value": "sink"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

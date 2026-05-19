@@ -1,0 +1,5 @@
+@lumen 1.0
+use comm.email
+use llm.ask
+
+summary = summarize.email(read.email(since="yesterday"), max_lines=3)

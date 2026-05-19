@@ -1,0 +1,3 @@
+@lumen 1.0
+
+items | filter(x -> x.name == "test") | sort_by(.score, descending)

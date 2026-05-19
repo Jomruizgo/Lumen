@@ -1,0 +1,3 @@
+match result:
+  ok(x) -> return x
+  fail(e) -> pass

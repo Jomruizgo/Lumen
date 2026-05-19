@@ -1,0 +1,18 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "ReturnStatement",
+      "value": {
+        "node_type": "NumberLiteral",
+        "value": "42"
+      }
+    }
+  ],
+  "valid": true
+}

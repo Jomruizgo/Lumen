@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: string literals cannot contain raw newlines", "line": 3, "col": 7}}

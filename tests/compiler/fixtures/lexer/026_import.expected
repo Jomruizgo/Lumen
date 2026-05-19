@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "IMPORT"}, {"type": "IDENTIFIER", "value": "math"}, {"type": "FROM"}, {"type": "IDENTIFIER", "value": "std"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

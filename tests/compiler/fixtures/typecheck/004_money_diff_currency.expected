@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0030", "message": "TypeMismatch: cannot add Money<USD> and Money<EUR>. Use convert() explicitly.", "line": 5, "col": 9}}

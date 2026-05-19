@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: action body cannot be empty, expected at least 'execute:' clause", "line": 3, "col": 1}}

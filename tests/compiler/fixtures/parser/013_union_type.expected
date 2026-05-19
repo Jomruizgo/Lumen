@@ -1,0 +1,51 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "FunctionDecl",
+      "name": "parse",
+      "params": [
+        {
+          "node_type": "Param",
+          "name": "r"
+        }
+      ],
+      "return_type": {
+        "node_type": "UnionType",
+        "left": {
+          "node_type": "PrimitiveType",
+          "name": "any"
+        },
+        "right": {
+          "node_type": "UnionType",
+          "left": {
+            "node_type": "PrimitiveType",
+            "name": "any"
+          },
+          "right": {
+            "node_type": "PrimitiveType",
+            "name": "any"
+          }
+        }
+      },
+      "body": {
+        "node_type": "Block",
+        "statements": [
+          {
+            "node_type": "ReturnStatement",
+            "value": {
+              "node_type": "Identifier",
+              "name": "r"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

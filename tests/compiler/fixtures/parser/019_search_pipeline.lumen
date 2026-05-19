@@ -1,0 +1,7 @@
+@lumen 1.0
+use data.search
+
+results = search.semantic(
+  query="documentos sobre Mars",
+  corpus="~/Documents/"
+) | sort_by(.relevance, descending) | take(5)

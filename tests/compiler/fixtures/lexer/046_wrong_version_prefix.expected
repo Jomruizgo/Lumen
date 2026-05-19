@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0100", "message": "MissingVersionDeclaration: first token must be '@lumen <version>'", "line": 1, "col": 1}}

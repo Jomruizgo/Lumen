@@ -1,0 +1,64 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "entity",
+      "value": {
+        "node_type": "ResolveBlock",
+        "subject": {
+          "node_type": "StringLiteral",
+          "value": "el cliente"
+        },
+        "strategies": [
+          {
+            "node_type": "StrategyClause",
+            "name": "high_confidence",
+            "body": {
+              "node_type": "Call",
+              "name": "use_context",
+              "args": [
+                {
+                  "node_type": "Identifier",
+                  "name": "crm"
+                }
+              ],
+              "kwargs": []
+            }
+          },
+          {
+            "node_type": "StrategyClause",
+            "name": "ambiguous",
+            "body": {
+              "node_type": "Call",
+              "name": "ask_user",
+              "args": [
+                {
+                  "node_type": "StringLiteral",
+                  "value": "¿Cuál?"
+                }
+              ],
+              "kwargs": []
+            }
+          },
+          {
+            "node_type": "StrategyClause",
+            "name": "unknown",
+            "body": {
+              "node_type": "Call",
+              "name": "fail_safe",
+              "args": [],
+              "kwargs": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

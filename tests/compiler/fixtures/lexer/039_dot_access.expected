@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "IDENTIFIER", "value": "obj"}, {"type": "DOT"}, {"type": "IDENTIFIER", "value": "field"}, {"type": "DOT"}, {"type": "IDENTIFIER", "value": "nested"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

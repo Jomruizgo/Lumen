@@ -1,0 +1,8 @@
+@lumen 1.0
+use comm.email
+
+action send_summary():
+  reversible: true
+  audit: full
+  execute:
+    result = send.email(to="a@b.com", subject="Hi", body="Hey")

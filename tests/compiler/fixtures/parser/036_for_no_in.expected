@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: expected 'in' after loop variable", "line": 3, "col": 10}}

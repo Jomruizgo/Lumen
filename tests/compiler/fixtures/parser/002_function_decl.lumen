@@ -1,0 +1,4 @@
+@lumen 1.0
+
+fn add(a, b):
+  return a + b

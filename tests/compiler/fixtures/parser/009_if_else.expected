@@ -1,0 +1,58 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "x",
+      "value": {
+        "node_type": "NumberLiteral",
+        "value": "5"
+      }
+    },
+    {
+      "node_type": "IfStatement",
+      "condition": {
+        "node_type": "BinaryOp",
+        "op": ">",
+        "left": {
+          "node_type": "Identifier",
+          "name": "x"
+        },
+        "right": {
+          "node_type": "NumberLiteral",
+          "value": "3"
+        }
+      },
+      "then_block": {
+        "node_type": "Block",
+        "statements": [
+          {
+            "node_type": "ExprStatement",
+            "value": {
+              "node_type": "StringLiteral",
+              "value": "grande"
+            }
+          }
+        ]
+      },
+      "else_block": {
+        "node_type": "Block",
+        "statements": [
+          {
+            "node_type": "ExprStatement",
+            "value": {
+              "node_type": "StringLiteral",
+              "value": "pequeno"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

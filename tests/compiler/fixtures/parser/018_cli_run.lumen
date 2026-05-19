@@ -1,0 +1,7 @@
+@lumen 1.0
+use cli.run
+
+result = cli.run(
+  "ffmpeg",
+  args=["-i", "input.mp4", "output.mp4"]
+)

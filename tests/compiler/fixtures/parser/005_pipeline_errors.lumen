@@ -1,0 +1,7 @@
+@lumen 1.0
+use web.fetch
+
+fn get(id) -> Map | Error:
+  result = fetch.url("https://api.example.com/${id}")?
+    | parse.json?
+  return result

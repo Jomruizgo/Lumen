@@ -1,0 +1,42 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "AgentDecl",
+      "name": "broken",
+      "body": {
+        "node_type": "AgentBody",
+        "on_clauses": [
+          {
+            "node_type": "OnHandler",
+            "pattern": {
+              "node_type": "Call",
+              "name": "email",
+              "args": [
+                {
+                  "node_type": "Identifier",
+                  "name": "e"
+                }
+              ],
+              "kwargs": []
+            },
+            "body": {
+              "node_type": "Block",
+              "statements": [
+                {
+                  "node_type": "PassStatement"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

@@ -1,0 +1,7 @@
+@lumen 1.0
+use comm.email
+use comm.notify
+use time.calendar
+use llm.ask
+
+emails = read.email(since="yesterday")

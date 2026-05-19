@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "IDENTIFIER", "value": "x"}, {"type": "ASSIGN"}, {"type": "NUMBER", "value": "0.16"}, {"type": "BECAUSE"}, {"type": "STRING", "value": "IVA Mexico"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

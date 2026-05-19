@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "TIME_LITERAL", "value": "300s"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

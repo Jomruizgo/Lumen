@@ -1,0 +1,4 @@
+@lumen 1.0
+use comm.email
+
+emails = read.email(since="yesterday")

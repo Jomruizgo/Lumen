@@ -1,0 +1,9 @@
+@lumen 1.0
+use sensitive.transfer
+
+action big_transfer(amount):
+  reversible: 1h
+  audit: full
+  escalation: webhook(url="https://approvals.example.com", timeout=300s)
+  execute:
+    transfer.money(from=treasury, to=ops, amount=amount)

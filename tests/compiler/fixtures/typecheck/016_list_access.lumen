@@ -1,0 +1,5 @@
+@lumen 1.0
+use data.search
+
+results = search.semantic(query="test", corpus="~/Docs/")
+first = results[0]

@@ -1,0 +1,4 @@
+@lumen 1.0
+
+target_id = listen.user("¿Cuál ID deshacer?")
+result = undo(action_id=target_id)

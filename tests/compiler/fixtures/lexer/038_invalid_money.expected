@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: currency symbol must be followed by a number", "line": 3, "col": 10}}

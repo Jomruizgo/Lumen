@@ -1,0 +1,4 @@
+@lumen 1.0
+
+items = list | filter(x -> x > 0)
+sorted = list | sort(x -> x.name)

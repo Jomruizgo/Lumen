@@ -1,0 +1,16 @@
+@lumen 1.0
+use web.fetch
+use data.parse
+
+fn get_user_data(user_id) -> Map | Error:
+  result = fetch.url("https://api.example.com/users/${user_id}")?
+    | parse.json?
+    | extract.field("data")?
+
+  return result
+
+data = get_user_data(42)
+
+match data:
+  ok(user) -> print "Usuario: ${user.name}"
+  fail(reason) -> print "Error: ${reason}"

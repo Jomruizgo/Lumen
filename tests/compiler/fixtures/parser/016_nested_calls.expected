@@ -1,0 +1,75 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "comm",
+        "email"
+      ]
+    },
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "llm",
+        "ask"
+      ]
+    },
+    {
+      "node_type": "Assignment",
+      "target": "summary",
+      "value": {
+        "node_type": "Call",
+        "name": "email",
+        "args": [
+          {
+            "node_type": "DotAccess",
+            "obj": {
+              "node_type": "Identifier",
+              "name": "summarize"
+            },
+            "field": "email"
+          },
+          {
+            "node_type": "Call",
+            "name": "email",
+            "args": [
+              {
+                "node_type": "DotAccess",
+                "obj": {
+                  "node_type": "Identifier",
+                  "name": "read"
+                },
+                "field": "email"
+              }
+            ],
+            "kwargs": [
+              [
+                "since",
+                {
+                  "node_type": "StringLiteral",
+                  "value": "yesterday"
+                }
+              ]
+            ]
+          }
+        ],
+        "kwargs": [
+          [
+            "max_lines",
+            {
+              "node_type": "NumberLiteral",
+              "value": "3"
+            }
+          ]
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

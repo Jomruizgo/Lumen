@@ -1,0 +1,10 @@
+@lumen 1.0
+
+usd_amount = $100 USD
+eur_amount = €50 EUR
+
+# Esto compila
+total_usd = usd_amount + $50 USD
+
+# Esto NO compila: error LMN-0030 TypeMismatch
+# total_mixed = usd_amount + eur_amount

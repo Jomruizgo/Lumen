@@ -1,0 +1,2 @@
+on email(e) where e.priority > 0.7:
+  pass

@@ -1,0 +1,7 @@
+@lumen 1.0
+use read.email
+
+emails = read.email(since="yesterday")
+urgent = emails | filter(e -> e.priority > 0.7)
+
+print "Tienes ${urgent.length} correos urgentes"

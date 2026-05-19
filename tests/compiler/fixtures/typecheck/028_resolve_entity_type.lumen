@@ -1,0 +1,7 @@
+@lumen 1.0
+
+supplier = resolve("García") {
+  high_confidence: use_context(crm.suppliers)
+  ambiguous: ask_user("¿Cuál?")
+  unknown: fail_safe()
+}

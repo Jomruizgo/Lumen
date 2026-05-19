@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0010", "message": "SyntaxError: function call requires parentheses: 'add(2, 3)'", "line": 3, "col": 10}}

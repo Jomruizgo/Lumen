@@ -1,0 +1,19 @@
+@lumen 1.0
+use cli.run
+use data.parse
+
+# Wrap de ffmpeg para conversión
+action convert_video(input_path, output_path):
+  reversible: false
+  audit: full
+  execute:
+    result = cli.run(
+      "ffmpeg",
+      args=["-i", input_path, "-c:v", "libx264", output_path]
+    )
+
+    match result:
+      ok(output) -> return output_path
+      fail(stderr) -> fail_safe(reason=stderr)
+
+convert_video("./input.mp4", "./output.mp4")

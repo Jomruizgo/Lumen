@@ -1,0 +1,23 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "rate",
+      "value": {
+        "node_type": "NumberLiteral",
+        "value": "0.16"
+      },
+      "because": {
+        "node_type": "BecauseAnnotation",
+        "reason": "IVA México 2026"
+      }
+    }
+  ],
+  "valid": true
+}

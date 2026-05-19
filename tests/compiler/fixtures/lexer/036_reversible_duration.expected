@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "REVERSIBLE"}, {"type": "COLON"}, {"type": "TIME_LITERAL", "value": "24h"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

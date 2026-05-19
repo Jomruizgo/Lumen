@@ -1,0 +1,1 @@
+{"valid": false, "error": {"code": "LMN-0030", "message": "TypeMismatch: 'undefined_var' is not defined in current scope", "line": 3, "col": 10}}

@@ -1,0 +1,6 @@
+@lumen 1.0
+
+agent reminder:
+  schedule: "0 8 * * *"
+  on tick:
+    pass

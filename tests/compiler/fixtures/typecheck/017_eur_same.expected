@@ -1,0 +1,1 @@
+{"valid": true, "inferred_types": {"a": "Money<EUR>", "b": "Money<EUR>", "total": "Money<EUR>"}}

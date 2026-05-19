@@ -1,0 +1,1 @@
+{"valid": true, "agent_types": {"monitor": {"state": {"count": "number", "ids": "List<Text>"}}}}

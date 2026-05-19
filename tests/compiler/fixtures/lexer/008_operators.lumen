@@ -1,0 +1,12 @@
+@lumen 1.0
+
+a = 1 + 2
+b = 3 - 1
+c = 4 * 2
+d = 8 / 2
+e = a > b
+f = a < b
+g = a >= b
+h = a <= b
+i = a == b
+j = a != b

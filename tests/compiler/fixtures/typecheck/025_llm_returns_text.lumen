@@ -1,0 +1,4 @@
+@lumen 1.0
+use llm.ask
+
+summary = llm.ask(prompt="Summarize", context={"data": items})

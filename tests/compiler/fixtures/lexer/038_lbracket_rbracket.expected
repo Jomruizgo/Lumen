@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "IDENTIFIER", "value": "items"}, {"type": "LBRACKET"}, {"type": "NUMBER", "value": "0"}, {"type": "RBRACKET"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

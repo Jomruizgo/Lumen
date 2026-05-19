@@ -1,0 +1,8 @@
+@lumen 1.0
+
+# Este es un comentario de línea
+x = 1  # comentario inline
+
+#: Doc comment para lumen explain
+fn documented():
+  return 42

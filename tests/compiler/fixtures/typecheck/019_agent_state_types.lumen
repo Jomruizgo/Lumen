@@ -1,0 +1,12 @@
+@lumen 1.0
+use comm.email
+
+agent monitor:
+  state:
+    count: number = 0
+    ids: List<Text> = []
+  
+  watch: read.email(filter={unread: true})
+  
+  on email(e):
+    pass

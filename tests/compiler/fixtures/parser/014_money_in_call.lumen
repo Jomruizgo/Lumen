@@ -1,0 +1,4 @@
+@lumen 1.0
+use sensitive.transfer
+
+pay_supplier("García", $1000 USD)

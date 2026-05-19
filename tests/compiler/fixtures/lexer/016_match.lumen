@@ -1,0 +1,5 @@
+@lumen 1.0
+
+match result:
+  ok(x) -> print "ok"
+  fail(e) -> print "fail"

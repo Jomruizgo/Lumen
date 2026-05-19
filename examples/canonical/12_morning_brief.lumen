@@ -1,0 +1,31 @@
+@lumen 1.0
+use read.email
+use read.calendar
+use notify.user
+use llm.ask
+
+action morning_brief():
+  reversible: true
+  audit: full
+  execute:
+    # Email
+    emails = read.email(since="last_24h")
+    urgent = emails | filter(e -> e.priority > 0.7)
+
+    # Calendar
+    today_events = read.calendar(range="today")
+
+    # Sintetizar
+    summary = llm.ask(
+      prompt="Resume estos correos urgentes y eventos de hoy",
+      context={
+        "urgent_emails": urgent,
+        "events": today_events
+      }
+    )
+
+    # Entregar
+    notify.user(summary, priority="high")
+
+# Ejecutar
+morning_brief()

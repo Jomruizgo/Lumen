@@ -1,0 +1,4 @@
+@lumen 1.0
+use cli.run
+
+result = cli.run("ls", args=["-la"])

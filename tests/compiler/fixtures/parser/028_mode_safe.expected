@@ -1,0 +1,48 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "FunctionDecl",
+      "name": "sum",
+      "params": [
+        {
+          "node_type": "Param",
+          "name": "a"
+        },
+        {
+          "node_type": "Param",
+          "name": "b"
+        }
+      ],
+      "body": {
+        "node_type": "Block",
+        "statements": [
+          {
+            "node_type": "PassStatement"
+          },
+          {
+            "node_type": "ReturnStatement",
+            "value": {
+              "node_type": "BinaryOp",
+              "op": "+",
+              "left": {
+                "node_type": "Identifier",
+                "name": "a"
+              },
+              "right": {
+                "node_type": "Identifier",
+                "name": "b"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

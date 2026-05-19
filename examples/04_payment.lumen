@@ -1,0 +1,21 @@
+@lumen 1.0
+use sensitive.transfer
+
+action pay_supplier(supplier_name, amount):
+  requires: amount > 0
+  reversible: 24h
+  audit: full
+  execute:
+    supplier = resolve(supplier_name) {
+      high_confidence: use_context(crm.suppliers)
+      ambiguous: ask_user("¿Cuál proveedor?")
+      unknown: fail_safe()
+    }
+
+    sensitive.transfer(
+      from=company_account,
+      to=supplier.account,
+      amount=amount
+    )
+
+pay_supplier("Pedro García", $1000 USD)

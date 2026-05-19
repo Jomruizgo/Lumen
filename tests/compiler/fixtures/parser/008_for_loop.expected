@@ -1,0 +1,35 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "ForStatement",
+      "target": "item",
+      "iterable": {
+        "node_type": "Identifier",
+        "name": "items"
+      },
+      "body": {
+        "node_type": "Block",
+        "statements": [
+          {
+            "node_type": "ExprStatement",
+            "value": {
+              "node_type": "DotAccess",
+              "obj": {
+                "node_type": "Identifier",
+                "name": "item"
+              },
+              "field": "name"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

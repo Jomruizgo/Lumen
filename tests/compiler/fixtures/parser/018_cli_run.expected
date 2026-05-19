@@ -1,0 +1,64 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "cli",
+        "run"
+      ]
+    },
+    {
+      "node_type": "Assignment",
+      "target": "result",
+      "value": {
+        "node_type": "Call",
+        "name": "run",
+        "args": [
+          {
+            "node_type": "DotAccess",
+            "obj": {
+              "node_type": "Identifier",
+              "name": "cli"
+            },
+            "field": "run"
+          },
+          {
+            "node_type": "StringLiteral",
+            "value": "ffmpeg"
+          }
+        ],
+        "kwargs": [
+          [
+            "args",
+            {
+              "node_type": "Call",
+              "name": "__list__",
+              "args": [
+                {
+                  "node_type": "StringLiteral",
+                  "value": "-i"
+                },
+                {
+                  "node_type": "StringLiteral",
+                  "value": "input.mp4"
+                },
+                {
+                  "node_type": "StringLiteral",
+                  "value": "output.mp4"
+                }
+              ],
+              "kwargs": []
+            }
+          ]
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

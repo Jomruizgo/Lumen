@@ -1,0 +1,6 @@
+@lumen 1.0
+
+a = "plain string"
+b = "with ${variable} inside"
+c = "and ${obj.field} too"
+d = "multiple ${a} and ${b} values"

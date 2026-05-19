@@ -1,0 +1,4 @@
+@lumen 1.0
+
+a = "hello" + " world"
+b = "count: " + "42"

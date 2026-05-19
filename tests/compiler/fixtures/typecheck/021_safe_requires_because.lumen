@@ -1,0 +1,9 @@
+@lumen 1.0
+use sensitive.transfer
+
+action pay(amount):
+  reversible: 24h
+  audit: full
+  execute:
+    rate = 0.16
+    tax = amount * rate

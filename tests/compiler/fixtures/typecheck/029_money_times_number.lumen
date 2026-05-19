@@ -1,0 +1,5 @@
+@lumen 1.0
+
+base = $100 USD
+multiplied = base * 2
+tax = base * 0.16

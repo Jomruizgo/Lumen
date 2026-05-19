@@ -1,0 +1,4 @@
+@lumen 1.0
+
+fn process(name: text, count: number, active: boolean) -> boolean:
+  return active

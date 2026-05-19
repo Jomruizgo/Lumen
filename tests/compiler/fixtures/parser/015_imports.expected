@@ -1,0 +1,21 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "ImportDecl",
+      "path": "./helpers.lumen",
+      "from_std": false
+    },
+    {
+      "node_type": "ImportDecl",
+      "path": "math",
+      "from_std": true
+    }
+  ],
+  "valid": true
+}

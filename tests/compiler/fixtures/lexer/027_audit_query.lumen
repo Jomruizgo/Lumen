@@ -1,0 +1,7 @@
+@lumen 1.0
+
+history = audit.query(
+  action="transfer.money",
+  since=2.hours.ago,
+  reversible=true
+)

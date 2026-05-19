@@ -1,0 +1,4 @@
+@lumen 1.0
+
+fn process(name: text, count: number, flag: boolean):
+  return flag

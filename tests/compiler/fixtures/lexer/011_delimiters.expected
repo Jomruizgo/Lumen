@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "LPAREN"}, {"type": "RPAREN"}, {"type": "LBRACE"}, {"type": "RBRACE"}, {"type": "LBRACKET"}, {"type": "RBRACKET"}, {"type": "COMMA"}, {"type": "COLON"}, {"type": "DOT"}, {"type": "AT"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

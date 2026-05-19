@@ -1,0 +1,20 @@
+@lumen 1.0
+use sensitive.transfer
+use transfer.money
+
+action critical_transfer(amount):
+  requires: amount > 10000
+  reversible: 1h
+  audit: full
+  escalation: webhook(
+    url="https://approvals.company.com/lumen",
+    timeout=300s
+  )
+  execute:
+    transfer.money(
+      from=treasury,
+      to=operations,
+      amount
+    ) because "Movimiento mensual de tesorería"
+
+critical_transfer($50000 USD)

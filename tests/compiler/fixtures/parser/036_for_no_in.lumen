@@ -1,0 +1,4 @@
+@lumen 1.0
+
+for item items:
+  print item

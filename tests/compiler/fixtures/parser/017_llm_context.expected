@@ -1,0 +1,71 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "llm",
+        "ask"
+      ]
+    },
+    {
+      "node_type": "Assignment",
+      "target": "result",
+      "value": {
+        "node_type": "Call",
+        "name": "ask",
+        "args": [
+          {
+            "node_type": "DotAccess",
+            "obj": {
+              "node_type": "Identifier",
+              "name": "llm"
+            },
+            "field": "ask"
+          }
+        ],
+        "kwargs": [
+          [
+            "prompt",
+            {
+              "node_type": "StringLiteral",
+              "value": "Resume esto"
+            }
+          ],
+          [
+            "context",
+            {
+              "node_type": "Call",
+              "name": "__dict__",
+              "args": [
+                {
+                  "node_type": "StringLiteral",
+                  "value": "emails"
+                },
+                {
+                  "node_type": "Identifier",
+                  "name": "emails"
+                },
+                {
+                  "node_type": "StringLiteral",
+                  "value": "events"
+                },
+                {
+                  "node_type": "Identifier",
+                  "name": "events"
+                }
+              ],
+              "kwargs": []
+            }
+          ]
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

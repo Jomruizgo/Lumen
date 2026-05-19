@@ -1,0 +1,8 @@
+@lumen 1.0
+use comm.notify
+
+agent daily:
+  schedule: "0 8 * * *"
+  
+  on tick:
+    notify.user("Good morning", priority="normal")

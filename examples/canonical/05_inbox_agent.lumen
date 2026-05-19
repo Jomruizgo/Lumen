@@ -1,0 +1,22 @@
+@lumen 1.0
+use read.email
+use notify.user
+use summarize.email
+
+agent inbox_monitor:
+  watch: read.email(filter={unread: true})
+
+  state:
+    seen_threads: List<Text> = []
+
+  on email(e) where e.priority > 0.7:
+    if e.thread_id in state.seen_threads:
+      pass
+    else:
+      state.seen_threads.append(e.thread_id)
+      summary = summarize.email(e, max_lines=3)
+      notify.user(summary, priority="high")
+
+  config:
+    escalation: cli
+    poll_interval: 5min

@@ -1,0 +1,16 @@
+@lumen 1.0
+use read.calendar
+use notify.user
+
+agent daily_reminder:
+  schedule: "0 8 * * *"  # 8am todos los días (cron syntax)
+
+  on tick:
+    events = read.calendar(range="today")
+
+    if events.length > 0:
+      summary = "Hoy tienes ${events.length} eventos: ${events.titles}"
+      notify.user(summary, priority="normal")
+
+  config:
+    escalation: cli

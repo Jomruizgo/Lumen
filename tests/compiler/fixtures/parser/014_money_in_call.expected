@@ -1,0 +1,38 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "sensitive",
+        "transfer"
+      ]
+    },
+    {
+      "node_type": "ExprStatement",
+      "expression": {
+        "node_type": "Call",
+        "name": "pay_supplier",
+        "args": [
+          {
+            "node_type": "StringLiteral",
+            "value": "García"
+          },
+          {
+            "node_type": "MoneyLiteral",
+            "value": "$1000 USD",
+            "amount": "1000",
+            "currency": "USD"
+          }
+        ],
+        "kwargs": []
+      }
+    }
+  ],
+  "valid": true
+}

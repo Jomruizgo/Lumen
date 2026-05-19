@@ -1,0 +1,8 @@
+@lumen 1.0
+
+recent = audit.query(action="transfer.money", since=2.hours.ago)
+result = undo(action_id="abc-123")
+
+match result:
+  ok -> print "Deshecho"
+  fail(reason) -> print "Error"

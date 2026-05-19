@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "PLUS"}, {"type": "MINUS"}, {"type": "STAR"}, {"type": "SLASH"}, {"type": "PIPE"}, {"type": "ARROW"}, {"type": "FAT_ARROW"}, {"type": "GT"}, {"type": "LT"}, {"type": "GTE"}, {"type": "LTE"}, {"type": "EQ"}, {"type": "NEQ"}, {"type": "ASSIGN"}, {"type": "QUESTION"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

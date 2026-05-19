@@ -1,0 +1,47 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "ActionDecl",
+      "name": "pay",
+      "params": [
+        {
+          "node_type": "Param",
+          "name": "amount"
+        }
+      ],
+      "body": {
+        "node_type": "ActionBody",
+        "requires": {
+          "node_type": "RequiresClause",
+          "condition": {
+            "node_type": "BinaryOp",
+            "op": ">",
+            "left": {
+              "node_type": "Identifier",
+              "name": "amount"
+            },
+            "right": {
+              "node_type": "NumberLiteral",
+              "value": "0"
+            }
+          }
+        },
+        "reversible": {
+          "node_type": "ReversibleClause",
+          "value": "24h"
+        },
+        "audit": {
+          "node_type": "AuditClause",
+          "level": "full"
+        }
+      }
+    }
+  ],
+  "valid": true
+}

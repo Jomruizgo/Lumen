@@ -1,0 +1,10 @@
+@lumen 1.0
+use comm.email
+use comm.notify
+
+agent inbox_monitor:
+  state:
+    seen: List<Text> = []
+  
+  on email(e) where e.priority > 0.7:
+    pass

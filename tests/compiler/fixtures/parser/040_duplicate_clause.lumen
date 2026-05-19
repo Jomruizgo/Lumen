@@ -1,0 +1,7 @@
+@lumen 1.0
+
+action pay(amount):
+  reversible: 24h
+  reversible: 1h
+  execute:
+    transfer.money(from=a, to=b, amount=amount)

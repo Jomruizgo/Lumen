@@ -1,0 +1,96 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "comm",
+        "email"
+      ]
+    },
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "comm",
+        "notify"
+      ]
+    },
+    {
+      "node_type": "AgentDecl",
+      "name": "inbox_monitor",
+      "body": {
+        "node_type": "AgentBody",
+        "state": {
+          "node_type": "StateClause",
+          "fields": [
+            [
+              "seen",
+              {
+                "node_type": "ParametrizedType",
+                "base": "List",
+                "args": [
+                  {
+                    "node_type": "PrimitiveType",
+                    "name": "any"
+                  }
+                ]
+              },
+              {
+                "node_type": "Call",
+                "name": "__list__",
+                "args": [],
+                "kwargs": []
+              }
+            ]
+          ]
+        },
+        "on_clauses": [
+          {
+            "node_type": "OnHandler",
+            "pattern": {
+              "node_type": "Call",
+              "name": "email",
+              "args": [
+                {
+                  "node_type": "Identifier",
+                  "name": "e"
+                }
+              ],
+              "kwargs": []
+            },
+            "condition": {
+              "node_type": "BinaryOp",
+              "op": ">",
+              "left": {
+                "node_type": "DotAccess",
+                "obj": {
+                  "node_type": "Identifier",
+                  "name": "e"
+                },
+                "field": "priority"
+              },
+              "right": {
+                "node_type": "NumberLiteral",
+                "value": "0.7"
+              }
+            },
+            "body": {
+              "node_type": "Block",
+              "statements": [
+                {
+                  "node_type": "PassStatement"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

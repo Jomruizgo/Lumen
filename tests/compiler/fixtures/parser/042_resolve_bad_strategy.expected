@@ -1,0 +1,39 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "entity",
+      "value": {
+        "node_type": "ResolveBlock",
+        "subject": {
+          "node_type": "StringLiteral",
+          "value": "test"
+        },
+        "strategies": [
+          {
+            "node_type": "StrategyClause",
+            "name": "maybe",
+            "body": {
+              "node_type": "Call",
+              "name": "use_context",
+              "args": [
+                {
+                  "node_type": "Identifier",
+                  "name": "crm"
+                }
+              ],
+              "kwargs": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

@@ -1,0 +1,8 @@
+@lumen 1.0
+use web.fetch
+
+result = fetch.url("https://api.example.com")
+
+match result:
+  ok(r) -> print "got response"
+  fail(e) -> print "error"

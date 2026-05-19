@@ -1,0 +1,101 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "CapabilityDecl",
+      "path": [
+        "web",
+        "fetch"
+      ]
+    },
+    {
+      "node_type": "FunctionDecl",
+      "name": "get",
+      "params": [
+        {
+          "node_type": "Param",
+          "name": "id"
+        }
+      ],
+      "return_type": {
+        "node_type": "UnionType",
+        "left": {
+          "node_type": "PrimitiveType",
+          "name": "any"
+        },
+        "right": {
+          "node_type": "PrimitiveType",
+          "name": "any"
+        }
+      },
+      "body": {
+        "node_type": "Block",
+        "statements": [
+          {
+            "node_type": "Assignment",
+            "target": "result",
+            "value": {
+              "node_type": "Pipeline",
+              "steps": [
+                {
+                  "node_type": "UnaryOp",
+                  "op": "?",
+                  "operand": {
+                    "node_type": "Call",
+                    "name": "url",
+                    "args": [
+                      {
+                        "node_type": "DotAccess",
+                        "obj": {
+                          "node_type": "Identifier",
+                          "name": "fetch"
+                        },
+                        "field": "url"
+                      },
+                      {
+                        "node_type": "StringInterp",
+                        "parts": [
+                          "https://api.example.com/",
+                          {
+                            "node_type": "Identifier",
+                            "name": "id"
+                          }
+                        ]
+                      }
+                    ],
+                    "kwargs": []
+                  }
+                },
+                {
+                  "node_type": "UnaryOp",
+                  "op": "?",
+                  "operand": {
+                    "node_type": "DotAccess",
+                    "obj": {
+                      "node_type": "Identifier",
+                      "name": "parse"
+                    },
+                    "field": "json"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node_type": "ReturnStatement",
+            "value": {
+              "node_type": "Identifier",
+              "name": "result"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "valid": true
+}

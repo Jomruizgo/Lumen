@@ -1,0 +1,14 @@
+@lumen 1.0
+use sensitive.transfer
+
+action calculate_tax(amount):
+  reversible: true
+  audit: full
+  execute:
+    tax_rate = 0.16 because "IVA México 2026, ley vigente"
+    deadline = 2026-12-31 because "Cierre fiscal anual"
+
+    tax = amount * tax_rate
+    return tax
+
+calculate_tax($1000 USD)

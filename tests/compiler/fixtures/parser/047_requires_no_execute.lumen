@@ -1,0 +1,4 @@
+@lumen 1.0
+
+action check(amount):
+  requires: amount > 0

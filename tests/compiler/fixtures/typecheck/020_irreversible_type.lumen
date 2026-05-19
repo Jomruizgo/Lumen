@@ -1,0 +1,8 @@
+@lumen 1.0
+use sensitive.transfer
+
+action hard_delete():
+  reversible: false
+  audit: full
+  execute:
+    r = delete.permanent(path="/tmp/test")

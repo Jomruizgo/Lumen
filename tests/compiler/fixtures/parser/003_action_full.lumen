@@ -1,0 +1,9 @@
+@lumen 1.0
+use sensitive.transfer
+
+action pay(amount):
+  requires: amount > 0
+  reversible: 24h
+  audit: full
+  execute:
+    transfer.money(from=a, to=b, amount=amount)

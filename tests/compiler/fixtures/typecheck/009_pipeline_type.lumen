@@ -1,0 +1,5 @@
+@lumen 1.0
+use comm.email
+
+emails = read.email(since="yesterday")
+urgent = emails | filter(e -> e.priority > 0.7)

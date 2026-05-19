@@ -1,0 +1,23 @@
+@lumen 1.0
+use sensitive.transfer
+use audit.query
+use listen.user
+
+# Listar transferencias recientes
+recent = audit.query(
+  action="transfer.money",
+  since=2.hours.ago,
+  reversible=true
+)
+
+print "Transferencias deshacibles:"
+for t in recent:
+  print "${t.action_id}: ${t.details.amount} a ${t.details.to}"
+
+# Deshacer una específica (usuario provee el id)
+target_id = listen.user("¿Cuál ID deshacer?")
+result = undo(action_id=target_id)
+
+match result:
+  ok -> print "Deshecho"
+  fail(reason) -> print "No se pudo: ${reason}"

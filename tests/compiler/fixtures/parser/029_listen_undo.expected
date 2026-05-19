@@ -1,0 +1,49 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "target_id",
+      "value": {
+        "node_type": "Call",
+        "name": "user",
+        "args": [
+          {
+            "node_type": "DotAccess",
+            "obj": {
+              "node_type": "Identifier",
+              "name": "listen"
+            },
+            "field": "user"
+          },
+          {
+            "node_type": "StringLiteral",
+            "value": "¿Cuál ID deshacer?"
+          }
+        ],
+        "kwargs": []
+      }
+    },
+    {
+      "node_type": "Assignment",
+      "target": "result",
+      "value": {
+        "node_type": "Call",
+        "name": "undo",
+        "args": [
+          {
+            "node_type": "Identifier",
+            "name": "target_id"
+          }
+        ],
+        "kwargs": []
+      }
+    }
+  ],
+  "valid": true
+}

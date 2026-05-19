@@ -1,0 +1,6 @@
+@lumen 1.0
+
+entity = resolve("test") {
+  high_confidence: use_context(crm)
+
+print "hello"

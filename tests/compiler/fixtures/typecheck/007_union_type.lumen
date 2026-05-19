@@ -1,0 +1,4 @@
+@lumen 1.0
+
+fn parse(r) -> Number | Text:
+  return r

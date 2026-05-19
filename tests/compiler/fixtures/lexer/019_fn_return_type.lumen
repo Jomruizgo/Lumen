@@ -1,0 +1,4 @@
+@lumen 1.0
+
+fn get_data(id) -> Map | Error:
+  return fetch(id)

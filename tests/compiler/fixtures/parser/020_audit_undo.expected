@@ -1,0 +1,122 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "recent",
+      "value": {
+        "node_type": "Call",
+        "name": "query",
+        "args": [
+          {
+            "node_type": "DotAccess",
+            "obj": {
+              "node_type": "Identifier",
+              "name": "audit"
+            },
+            "field": "query"
+          }
+        ],
+        "kwargs": [
+          [
+            "action",
+            {
+              "node_type": "StringLiteral",
+              "value": "transfer.money"
+            }
+          ],
+          [
+            "since",
+            {
+              "node_type": "DotAccess",
+              "obj": {
+                "node_type": "DotAccess",
+                "obj": {
+                  "node_type": "NumberLiteral",
+                  "value": "2"
+                },
+                "field": "hours"
+              },
+              "field": "ago"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "node_type": "Assignment",
+      "target": "result",
+      "value": {
+        "node_type": "Call",
+        "name": "undo",
+        "args": [
+          {
+            "node_type": "StringLiteral",
+            "value": "abc-123"
+          }
+        ],
+        "kwargs": []
+      }
+    },
+    {
+      "node_type": "MatchStatement",
+      "subject": {
+        "node_type": "Identifier",
+        "name": "result"
+      },
+      "arms": [
+        {
+          "node_type": "MatchArm",
+          "pattern": {
+            "node_type": "Identifier",
+            "name": "ok"
+          },
+          "body": {
+            "node_type": "Block",
+            "statements": [
+              {
+                "node_type": "ExprStatement",
+                "value": {
+                  "node_type": "StringLiteral",
+                  "value": "Deshecho"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node_type": "MatchArm",
+          "pattern": {
+            "node_type": "Call",
+            "name": "fail",
+            "args": [
+              {
+                "node_type": "Identifier",
+                "name": "reason"
+              }
+            ],
+            "kwargs": []
+          },
+          "body": {
+            "node_type": "Block",
+            "statements": [
+              {
+                "node_type": "ExprStatement",
+                "value": {
+                  "node_type": "StringLiteral",
+                  "value": "Error"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "valid": true
+}

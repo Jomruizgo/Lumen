@@ -1,0 +1,6 @@
+@lumen 1.0
+use data.search
+
+results = search.semantic(query="test")
+  | sort_by(.relevance, descending)
+  | take(10)

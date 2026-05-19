@@ -1,0 +1,7 @@
+@lumen 1.0
+
+x = 5
+if x > 3:
+  print "grande"
+else:
+  print "pequeno"

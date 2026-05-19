@@ -1,0 +1,2 @@
+agent inbox_monitor:
+  watch: comm.email

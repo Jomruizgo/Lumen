@@ -1,0 +1,5 @@
+@lumen 1.0
+use time.calendar
+
+events = read.calendar(range="today")
+count = events.length

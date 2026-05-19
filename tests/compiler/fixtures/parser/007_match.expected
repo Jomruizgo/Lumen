@@ -1,0 +1,82 @@
+{
+  "node_type": "Program",
+  "version": {
+    "node_type": "VersionDecl",
+    "major": 1,
+    "minor": 0
+  },
+  "top_levels": [
+    {
+      "node_type": "Assignment",
+      "target": "result",
+      "value": {
+        "node_type": "Call",
+        "name": "get_data",
+        "args": [],
+        "kwargs": []
+      }
+    },
+    {
+      "node_type": "MatchStatement",
+      "subject": {
+        "node_type": "Identifier",
+        "name": "result"
+      },
+      "arms": [
+        {
+          "node_type": "MatchArm",
+          "pattern": {
+            "node_type": "Call",
+            "name": "ok",
+            "args": [
+              {
+                "node_type": "Identifier",
+                "name": "x"
+              }
+            ],
+            "kwargs": []
+          },
+          "body": {
+            "node_type": "Block",
+            "statements": [
+              {
+                "node_type": "ExprStatement",
+                "value": {
+                  "node_type": "StringLiteral",
+                  "value": "ok"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node_type": "MatchArm",
+          "pattern": {
+            "node_type": "Call",
+            "name": "fail",
+            "args": [
+              {
+                "node_type": "Identifier",
+                "name": "e"
+              }
+            ],
+            "kwargs": []
+          },
+          "body": {
+            "node_type": "Block",
+            "statements": [
+              {
+                "node_type": "ExprStatement",
+                "value": {
+                  "node_type": "StringLiteral",
+                  "value": "fail"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "valid": true
+}

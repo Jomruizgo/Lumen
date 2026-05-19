@@ -1,0 +1,1 @@
+{"valid": true, "inferred_types": {"result": "number"}, "function_types": {"add": {"params": ["number", "number"], "return": "number"}}}

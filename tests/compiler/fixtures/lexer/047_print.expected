@@ -1,0 +1,1 @@
+{"valid": true, "tokens": [{"type": "PRINT"}, {"type": "STRING", "value": "Hello"}, {"type": "NEWLINE"}, {"type": "EOF"}]}

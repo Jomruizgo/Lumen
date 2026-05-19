@@ -1,0 +1,8 @@
+@lumen 1.0
+use comm.email
+
+agent monitor:
+  watch: read.email(filter={unread: true})
+  
+  on email(e)
+    pass

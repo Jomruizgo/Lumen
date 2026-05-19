@@ -1,0 +1,17 @@
+@lumen 1.0
+use send.email
+
+action send_to_team(team_name, subject, body):
+  reversible: false
+  audit: full
+  execute:
+    team = resolve(team_name) {
+      high_confidence: use_context(org.teams)
+      ambiguous: ask_user("¿Cuál equipo?", options=org.teams.list())
+      unknown: fail_safe()
+    }
+
+    for member in team.members:
+      send.email(to=member.email, subject, body)
+
+send_to_team("engineering", "Reunión mañana", "10am sala 3")
